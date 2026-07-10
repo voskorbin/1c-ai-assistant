@@ -1,0 +1,35 @@
+# -----------------------------------------------------------------------------
+# Вариант 1: один контейнер на один IB.
+# -----------------------------------------------------------------------------
+
+services:
+  ai-gateway:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: ai-gateway
+    ports:
+      - "8000:8000"
+    environment:
+      # Секреты лучше держать в .env-файле
+      - LLM_API_KEY=${LLM_API_KEY}
+      - JIRA_URL=${JIRA_URL:-https://jira.example.com}
+      - JIRA_PERSONAL_TOKEN=${JIRA_PERSONAL_TOKEN}
+      - CONFLUENCE_URL=${CONFLUENCE_URL:-https://confluence.example.com}
+      - CONFLUENCE_PERSONAL_TOKEN=${CONFLUENCE_PERSONAL_TOKEN}
+      - MCP_ONEC_USERNAME=${MCP_ONEC_USERNAME}
+      - MCP_ONEC_PASSWORD=${MCP_ONEC_PASSWORD}
+    volumes:
+      # Конфиг шлюза
+      - ./config.example.json:/app/config.json:ro
+      # Локальная копия MAIN_XML + daemon.json code-index
+      - ./repo:/repo:rw
+      # Логи на хосте (опционально)
+      - ./logs:/app/logs:rw
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

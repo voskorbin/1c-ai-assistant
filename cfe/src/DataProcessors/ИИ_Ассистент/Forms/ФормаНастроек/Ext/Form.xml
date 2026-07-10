@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки ИИ Ассистента</v8:content>
+		</v8:item>
+	</Title>
+	<Width>60</Width>
+	<Height>20</Height>
+	<AutoSaveDataInSettings>DontUse</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновная" id="200">
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="201"/>
+			<ChildItems>
+				<InputField name="ПромптПодсказка" id="202">
+					<DataPath>ПромптПодсказка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Промпт-подсказка</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Top</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="ПромптПодсказкаКонтекстноеМеню" id="203"/>
+					<ExtendedTooltip name="ПромптПодсказкаРасширеннаяПодсказка" id="204"/>
+				</InputField>
+				<UsualGroup name="ГруппаКнопки" id="205">
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="206"/>
+					<ChildItems>
+						<Button name="Сохранить" id="207">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Сохранить</CommandName>
+							<ExtendedTooltip name="СохранитьРасширеннаяПодсказка" id="208"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ИИ_Ассистент</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПромптПодсказка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Промпт-подсказка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="100">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьНастройки</Action>
+			<Representation>Text</Representation>
+		</Command>
+	</Commands>
+</Form>

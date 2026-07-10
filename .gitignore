@@ -1,0 +1,49 @@
+# Отчёты BSL language server
+bsl-json.json
+
+# Логи
+*.log
+*.log.*
+*.err
+*.out
+*.stdout
+*.stderr
+
+# Скомпилированные бинарники и бэкапы
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Бэкапы и временные файлы
+*.bak
+*.tmp
+*.swp
+*~
+
+# Локальные конфиги с секретами
+.env
+start.local.bat
+config.local.json
+config.secrets.json
+
+# Виртуальные окружения Python
+venv/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Операционные системы
+.DS_Store
+Thumbs.db
+
+# Инструкции для агентов — локальный файл
+AGENTS.md
+
+# Локальный конфиг opencode с секретами MCP
+opencode.jsonc

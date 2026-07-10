@@ -1,0 +1,25 @@
+# 1C builds
+*.cf
+*.cfe
+*.epf
+*.erf
+*.mxl
+*.dt
+*.1cd
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+~$*

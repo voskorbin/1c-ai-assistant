@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.19">
+	<ConfigVersions>
+		<Metadata name="Catalog.ИИ_СессииЧатов" id="58e3fc60-96ec-4b6a-a910-34417d2bc78e" configVersion="70587904ad61a4e09950035e97c22c832a0c76e7">
+			<Metadata name="Catalog.ИИ_СессииЧатов.Attribute.Пользователь" id="18f629c9-1ac9-4a10-b747-2df0506dd778"/>
+			<Metadata name="Catalog.ИИ_СессииЧатов.Attribute.КонтекстОбъектаJSON" id="8a8d88a5-8b60-4946-8aca-41c9a5aaea49"/>
+			<Metadata name="Catalog.ИИ_СессииЧатов.Attribute.ОбъектКонтекста" id="bd29e12c-1633-436e-9253-70429dc9699d"/>
+				<Metadata name="Catalog.ИИ_СессииЧатов.Attribute.Контекстный" id="cbc8f82b-d9d5-4b18-9851-c2f566ad99dd"/>
+		</Metadata>
+		<Metadata name="Catalog.ИИ_СессииЧатов.ObjectModule" id="58e3fc60-96ec-4b6a-a910-34417d2bc78e.0" configVersion="128556bca652c986314262f90f19e730e29033c6"/>
+		<Metadata name="CommonCommand.ИИ_ОткрытьЧат" id="e6f9f1d5-5f4c-419c-a9a3-31bfdac8ad15" configVersion="a2ff355c5494ec9dc6e2ab460dfdf472113946db"/>
+		<Metadata name="CommonCommand.ИИ_ОткрытьЧат.CommandModule" id="e6f9f1d5-5f4c-419c-a9a3-31bfdac8ad15.2" configVersion="5b6775383bc017693047ac2dd3d2e43dc9e8742c"/>
+		<Metadata name="CommonModule.ИИ_АссистентКлиент" id="368f394d-0d56-4af0-bbf8-54b72ca5584c" configVersion="8618a633f903c296f4eb94d46ed96713e33f60ad"/>
+		<Metadata name="CommonModule.ИИ_АссистентКлиент.Module" id="368f394d-0d56-4af0-bbf8-54b72ca5584c.0" configVersion="0e79a6f1284132b2eaae4e59a85e8f15f7a95a04"/>
+		<Metadata name="CommonModule.ИИ_АссистентСервер" id="42befd5e-5e1a-45d7-b4d1-cb3af181d55c" configVersion="303b025900f1876dcab3ecdaeb1c86e127d53cae"/>
+		<Metadata name="CommonModule.ИИ_АссистентСервер.Module" id="42befd5e-5e1a-45d7-b4d1-cb3af181d55c.0" configVersion="83befe7ba3253dad6bb4b866432b00844767b26a"/>
+		<Metadata name="Configuration.ИИ_Ассистент" id="499db66e-adb1-453e-bab6-10d56a04d915" configVersion="8f4e3c2a1b0d9e8f7c6b5a4d3e2f1c0b9a8d7e6f"/>
+		<Metadata name="Configuration.ИИ_Ассистент.HomePageWorkArea" id="be7cb4ed-e3eb-4495-a1e0-0d865da44754.8" configVersion="22ec62ca312c9debbf1dd0cf2e49c1a4d8892e3e"/>
+		<Metadata name="Constant.ИИ_АдресШлюза" id="51e80f34-a9d1-4a50-8fcc-e61248934011" configVersion="fb8f5ddb2e0d652d26c7d1a5d8b84ed9dd5ed53a"/>
+		<Metadata name="Constant.ИИ_АдресШлюза.ManagerModule" id="51e80f34-a9d1-4a50-8fcc-e61248934011.1" configVersion="cdc5308b99544c67fe8f0e5db1b3d7606125a2ea"/>
+		<Metadata name="Constant.ИИ_АдресШлюза.ValueManagerModule" id="51e80f34-a9d1-4a50-8fcc-e61248934011.0" configVersion="50bcb4bcca2504d302f67e5829fa8fbca699b58b"/>
+		<Metadata name="Constant.ИИ_ИнтервалОпроса" id="37ced145-166c-443e-9568-9e70babc6537" configVersion="710ea90e76abad762be125017ef993fa050e5fb3"/>
+		<Metadata name="Constant.ИИ_ИнтервалОпроса.ManagerModule" id="37ced145-166c-443e-9568-9e70babc6537.1" configVersion="cdc5308b99544c67fe8f0e5db1b3d7606125a2ea"/>
+		<Metadata name="Constant.ИИ_ИнтервалОпроса.ValueManagerModule" id="37ced145-166c-443e-9568-9e70babc6537.0" configVersion="c0b76a85e400d834dadb27c49f35302a39a36b76"/>
+		<Metadata name="Constant.ИИ_МаксимальныйРазмерВложения" id="166c0e91-2400-4365-827e-47e6b7727a50" configVersion="1c240e151b252cef316b9447979b8b726d032681"/>
+		<Metadata name="Constant.ИИ_МаксимальныйРазмерВложения.ManagerModule" id="166c0e91-2400-4365-827e-47e6b7727a50.1" configVersion="cdc5308b99544c67fe8f0e5db1b3d7606125a2ea"/>
+		<Metadata name="Constant.ИИ_МаксимальныйРазмерВложения.ValueManagerModule" id="166c0e91-2400-4365-827e-47e6b7727a50.0" configVersion="50bcb4bcca2504d302f67e5829fa8fbca699b58b"/>
+		<Metadata name="Constant.ИИ_МаксимальноеКоличествоСообщенийКонтекста" id="225a977a-4598-45f5-a763-cac7a5d0cf91" configVersion="a0b7e061cf693dfb7c06b877a39401b98845825c"/>
+		<Metadata name="Constant.ИИ_МаксимальноеКоличествоСообщенийКонтекста.ManagerModule" id="225a977a-4598-45f5-a763-cac7a5d0cf91.1" configVersion="cdc5308b99544c67fe8f0e5db1b3d7606125a2ea"/>
+		<Metadata name="Constant.ИИ_МаксимальноеКоличествоСообщенийКонтекста.ValueManagerModule" id="225a977a-4598-45f5-a763-cac7a5d0cf91.0" configVersion="50bcb4bcca2504d302f67e5829fa8fbca699b58b"/>
+		<Metadata name="Constant.ИИ_ТаймаутЗапроса" id="1824abb1-3cfe-48fd-82f8-dbe12e833d14" configVersion="6307b506198c54dce26cbd500616021227b762f9"/>
+		<Metadata name="Constant.ИИ_ТаймаутЗапроса.ManagerModule" id="1824abb1-3cfe-48fd-82f8-dbe12e833d14.1" configVersion="cdc5308b99544c67fe8f0e5db1b3d7606125a2ea"/>
+		<Metadata name="Constant.ИИ_ТаймаутЗапроса.ValueManagerModule" id="1824abb1-3cfe-48fd-82f8-dbe12e833d14.0" configVersion="50bcb4bcca2504d302f67e5829fa8fbca699b58b"/>
+		<Metadata name="DataProcessor.ИИ_Ассистент" id="4756b440-9c60-49ad-b24f-7b3f2f0e2388" configVersion="0d156bf1a85749ca37f512fde2b083153ac31470"/>
+		<Metadata name="DataProcessor.ИИ_Ассистент.Form.ФормаЧата" id="b2ebae1f-0857-4050-ad8d-7b80d48e5ccc" configVersion="bfcc378813dcf9837c10009a852031b7cd5ff85a"/>
+		<Metadata name="DataProcessor.ИИ_Ассистент.Form.ФормаЧата.Form" id="b2ebae1f-0857-4050-ad8d-7b80d48e5ccc.0" configVersion="d589314b752ab1d4bd5b01a2d95906b3b396872c"/>
+		<Metadata name="DataProcessor.ИИ_Ассистент.Form.ФормаНастроек" id="f259cfd4-7bc3-4ad3-92fa-e883fbc919f9" configVersion="0000000000000000000000000000000000000000"/>
+		<Metadata name="DataProcessor.ИИ_Ассистент.Form.ФормаНастроек.Form" id="f259cfd4-7bc3-4ad3-92fa-e883fbc919f9.0" configVersion="0000000000000000000000000000000000000000"/>
+		<Metadata name="DataProcessor.ИИ_Ассистент.ManagerModule" id="4756b440-9c60-49ad-b24f-7b3f2f0e2388.2" configVersion="cdc5308b99544c67fe8f0e5db1b3d7606125a2ea"/>
+		<Metadata name="DataProcessor.ИИ_Ассистент.ObjectModule" id="4756b440-9c60-49ad-b24f-7b3f2f0e2388.0" configVersion="50bcb4bcca2504d302f67e5829fa8fbca699b58b"/>
+		<Metadata name="DefinedType.ИИ_ТипыОбъектовКонтекстныхЗапросов" id="f25dffc2-3145-457b-8340-c22f732edce0" configVersion="0000000000000000000000000000000000000000"/>
+		<Metadata name="Enum.ИИ_РолиСообщений" id="49445f44-6240-4484-8786-34337d1e6094" configVersion="d7f76f1e00c861916142c692159decfc9338bf9f">
+			<Metadata name="Enum.ИИ_РолиСообщений.EnumValue.Ассистент" id="e20d2706-3a17-45a3-af29-7843c3849478"/>
+			<Metadata name="Enum.ИИ_РолиСообщений.EnumValue.Пользователь" id="f12898ec-5daf-4baa-af07-4545bd098a6d"/>
+		</Metadata>
+		<Metadata name="Enum.ИИ_РолиСообщений.ManagerModule" id="49445f44-6240-4484-8786-34337d1e6094.0" configVersion="2647331b3054587ee2e63d9a21f8584ca180d1ae"/>
+		<Metadata name="InformationRegister.ИИ_ИсторияЧатов" id="23575c73-59fc-43f1-9397-c56d75a3ee11" configVersion="a357b1d8d5e2d8ece7c5eff2379b7f91b9b8a0b1">
+			<Metadata name="InformationRegister.ИИ_ИсторияЧатов.Resource.ТекстСообщения" id="35b466f1-eee5-4ca6-b2a5-e8afde74f480"/>
+			<Metadata name="InformationRegister.ИИ_ИсторияЧатов.Dimension.ИдентификаторСообщения" id="625b21e4-56d8-4e43-8dcf-ead2571e6511"/>
+			<Metadata name="InformationRegister.ИИ_ИсторияЧатов.Resource.ДатаСообщения" id="a965d82f-6d34-4314-8376-fda2b36fee6f"/>
+			<Metadata name="InformationRegister.ИИ_ИсторияЧатов.Resource.Роль" id="d198e785-71c9-4251-b0bb-80c00f35378a"/>
+			<Metadata name="InformationRegister.ИИ_ИсторияЧатов.Dimension.Сессия" id="e5885a1e-c7aa-4893-a45c-1403b9c69dab"/>
+		</Metadata>
+		<Metadata name="InformationRegister.ИИ_ИсторияЧатов.ManagerModule" id="23575c73-59fc-43f1-9397-c56d75a3ee11.2" configVersion="3cc5a5f51501aa14d0e1129dd62bc33394bade54"/>
+		<Metadata name="InformationRegister.ИИ_НастройкиПользователей" id="1bd93f69-eef9-4eef-9f16-2ec3eafb42a3" configVersion="0000000000000000000000000000000000000000">
+			<Metadata name="InformationRegister.ИИ_НастройкиПользователей.Dimension.Пользователь" id="656f263f-05ed-44da-ad60-5a18ea526029"/>
+			<Metadata name="InformationRegister.ИИ_НастройкиПользователей.Dimension.КлючНастройки" id="bebdd11a-4cd2-4ba6-8418-f09078cb1e0d"/>
+			<Metadata name="InformationRegister.ИИ_НастройкиПользователей.Resource.Значение" id="8cf01bbe-7df2-42bd-9a3c-1ac249e05952"/>
+		</Metadata>
+		<Metadata name="InformationRegister.ИИ_НастройкиПользователей.ManagerModule" id="1bd93f69-eef9-4eef-9f16-2ec3eafb42a3.2" configVersion="0000000000000000000000000000000000000000"/>
+		<Metadata name="Language.Русский" id="d7dc1c2c-f9f4-413c-8f99-5af758de0210" configVersion="1f95be752b9402560bcab117de2c59ecd359a4dd"/>
+		<Metadata name="Role.ИИ_Администратор" id="c3f2c888-34b9-4aef-87fa-e320488c2474" configVersion="0000000000000000000000000000000000000000"/>
+		<Metadata name="Role.ИИ_Администратор.Rights" id="c3f2c888-34b9-4aef-87fa-e320488c2474.0" configVersion="0000000000000000000000000000000000000000"/>
+		<Metadata name="Role.ИИ_Пользователь" id="8aab77c9-2b60-4bea-8b8e-2b7bbb21113d" configVersion="0000000000000000000000000000000000000000"/>
+		<Metadata name="Role.ИИ_Пользователь.Rights" id="8aab77c9-2b60-4bea-8b8e-2b7bbb21113d.0" configVersion="0000000000000000000000000000000000000000"/>
+		<Metadata name="Subsystem.ИИ_Ассистент" id="164f5f8e-38fa-4ad1-82a9-ce180f5eb45f" configVersion="bd22fbf9e2941b1f4acb56de8ba08851adaa6cd0"/>
+		<Metadata name="Subsystem.ИИ_Ассистент.CommandInterface" id="164f5f8e-38fa-4ad1-82a9-ce180f5eb45f.1" configVersion="fdaec039eea90396e8275a4185f01ff2ce9f09af"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

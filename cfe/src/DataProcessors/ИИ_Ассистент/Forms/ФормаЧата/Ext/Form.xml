@@ -1,0 +1,724 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>ИИ Ассистент</v8:content>
+		</v8:item>
+	</Title>
+	<Width>80</Width>
+	<Height>40</Height>
+	<AutoSaveDataInSettings>DontUse</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ОбработкаПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновная" id="1">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСессии" id="3">
+					<Width>25</Width>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСессииРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Table name="СписокСессий" id="7">
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Height>30</Height>
+							<DataPath>СписокСессий</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+								<ExcludedCommand>SearchHistory</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокСессийКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="СписокСессийКоманднаяПанель" id="55">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СписокСессийНовыйЧат" id="56">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.НовыйЧат</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="СписокСессийНовыйЧатРасширеннаяПодсказка" id="57"/>
+									</Button>
+									<Button name="СписокСессийУдалитьСессию" id="58">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УдалитьСессию</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="СписокСессийУдалитьСессиюРасширеннаяПодсказка" id="59"/>
+									</Button>
+									<Button name="РедактироватьПромптПодсказку" id="127">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.РедактироватьПромптПодсказку</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<Picture>
+											<xr:Ref>StdPicture.Setting</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="РедактироватьПромптПодсказкуРасширеннаяПодсказка" id="128"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокСессийРасширеннаяПодсказка" id="10"/>
+							<SearchStringAddition name="СписокСессийСтрокаПоиска" id="60">
+								<AdditionSource>
+									<Item>СписокСессий</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<HorizontalStretch>true</HorizontalStretch>
+								<ContextMenu name="СписокСессийСтрокаПоискаКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="СписокСессийСтрокаПоискаРасширеннаяПодсказка" id="62"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСессийСостояниеПросмотра" id="63">
+								<AdditionSource>
+									<Item>СписокСессий</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСессийСостояниеПросмотраКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="СписокСессийСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокСессийУправлениеПоиском" id="66">
+								<AdditionSource>
+									<Item>СписокСессий</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСессийУправлениеПоискомКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="СписокСессийУправлениеПоискомРасширеннаяПодсказка" id="68"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокСессийВыбор</Event>
+								<Event name="OnActivateRow">СписокСессийПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="Наименование" id="20">
+									<DataPath>СписокСессий.Наименование</DataPath>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="22"/>
+									<Events>
+										<Event name="OnChange">НаименованиеПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЧат" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чат</v8:content>
+						</v8:item>
+					</Title>
+					<Width>75</Width>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЧатРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<HTMLDocumentField name="СообщенияHTML" id="28">
+							<DataPath>СообщенияHTML</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Height>30</Height>
+							<Output>Disable</Output>
+							<ContextMenu name="СообщенияHTMLКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="СообщенияHTMLРасширеннаяПодсказка" id="30"/>
+							<Events>
+								<Event name="OnClick">СообщенияHTMLПриНажатии</Event>
+							</Events>
+					</HTMLDocumentField>
+					
+					<UsualGroup name="ГруппаВвод" id="31">
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="ГруппаВводРасширеннаяПодсказка" id="32"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВводЛевый" id="108">
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ExtendedTooltip name="ГруппаВводЛевыйРасширеннаяПодсказка" id="109"/>
+								<ChildItems>
+									<InputField name="ТекстСообщения" id="33">
+											<DataPath>ТекстСообщения</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxHeight>8</MaxHeight>
+											<HorizontalStretch>true</HorizontalStretch>
+											<MultiLine>true</MultiLine>
+											<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
+										<InputHint>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Введите сообщение... (Enter для отправки)</v8:content>
+											</v8:item>
+										</InputHint>
+											<ContextMenu name="ТекстСообщенияКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="ТекстСообщенияРасширеннаяПодсказка" id="35"/>
+										</InputField>
+										<UsualGroup name="ГруппаВложенияИнфо" id="110">
+											<Group>AlwaysHorizontal</Group>
+											<ShowTitle>false</ShowTitle>
+											<VerticalStretch>false</VerticalStretch>
+											<ExtendedTooltip name="ГруппаВложенияИнфоРасширеннаяПодсказка" id="111"/>
+											<ChildItems>
+												<LabelDecoration name="ВложенияИнфо" id="112">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вложения: 0</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ВложенияИнфоКонтекстноеМеню" id="113"/>
+													<ExtendedTooltip name="ВложенияИнфоРасширеннаяПодсказка" id="114"/>
+												</LabelDecoration>
+										<Button name="ОчиститьВложения" id="117">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<CommandName>Form.Command.ОчиститьВложения</CommandName>
+													<Picture>
+														<xr:Ref>StdPicture.Delete</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="ОчиститьВложенияРасширеннаяПодсказка" id="118"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКнопки" id="94">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="95"/>
+									<ChildItems>
+										<Button name="Отправить" id="36">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<DefaultButton>true</DefaultButton>
+											<CommandName>Form.Command.Отправить</CommandName>
+											<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="37"/>
+										</Button>
+										<Button name="ПрикрепитьКартинку" id="76">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Command.ПрикрепитьКартинку</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.Attach</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Прикрепить картинку</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПрикрепитьКартинкуРасширеннаяПодсказка" id="77"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="38">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ИИ_Ассистент</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокСессий" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список сессий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Сессия" id="40">
+					<Type>
+						<v8:Type>cfg:CatalogRef.ИИ_СессииЧатов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="41">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекущаяСессия" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая сессия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИИ_СессииЧатов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СообщенияHTML" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщения HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстСообщения" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтекстОбъектаJSON" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекст объекта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектКонтекста" id="130">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект контекста</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DefinedType.ИИ_ТипыОбъектовКонтекстныхЗапросов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Контекстный" id="120">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПромптПодсказка" id="121">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Промпт-подсказка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдетГенерация" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идет генерация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗапроса" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресХранилищаЗапроса" id="72">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресШлюза" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес шлюза</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаймаутЗапроса" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймаут запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СессияТекущегоЗапроса" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сессия текущего запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИИ_СессииЧатов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбновлениеСпискаСессий" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновление списка сессий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнтервалОпроса" id="66">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсторияHTML" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийОтветHTML" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий ответ HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Вложения" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вложения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяФайла" id="72">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>260</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="MimeType" id="73">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДанныеBase64" id="74">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="МаксимальныйРазмерВложения" id="131">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальный размер вложения (МБ)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МаксимальноеКоличествоСообщенийКонтекста" id="132">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальное количество сообщений контекста</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="HTMLДокументШаблон" id="133">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>HTML документ шаблон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НовыйЧат" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый чат</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НовыйЧатОбработка</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Отправить" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Enter</Shortcut>
+			<Action>ОтправитьОбработка</Action>
+		</Command>
+		<Command name="УдалитьСессию" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить сессию</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьСессиюОбработка</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПрикрепитьКартинку" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить картинку</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Attach</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПрикрепитьКартинкуОбработка</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОчиститьВложения" id="100">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить вложения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить все вложения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьВложенияОбработка</Action>
+			<Representation>Picture</Representation>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+		</Command>
+		<Command name="РедактироватьПромптПодсказку" id="129">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Промпт-подсказка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать персональную подсказку для модели</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РедактироватьПромптПодсказкуОбработка</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Сессия">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИИ_СессииЧатов</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ОбъектКонтекста">
+			<Type>
+				<v8:Type>cfg:DefinedType.ИИ_ТипыОбъектовКонтекстныхЗапросов</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="КонтекстОбъектаJSON">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

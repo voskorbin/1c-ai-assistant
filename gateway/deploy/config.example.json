@@ -1,0 +1,64 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8000,
+    "stream_store_ttl_seconds": 3600
+  },
+  "llm": {
+    "url": "https://your-llm-api.example.com/v1/chat/completions",
+    "model": "your-model-name",
+    "api_key_env": "LLM_API_KEY",
+    "timeout_seconds": 300,
+    "max_tokens": 4096,
+    "temperature": 0.3,
+    "reasoning": false,
+    "max_concurrent_requests": 10
+  },
+  "mcp_servers": [
+    {
+      "name": "atlassian",
+      "enabled": true,
+      "transport": "stdio",
+      "command": "uvx",
+      "args": ["mcp-atlassian"],
+      "read_only": true,
+      "env": {
+        "JIRA_URL": "https://jira.example.com",
+        "JIRA_API_VERSION": "2",
+        "JIRA_PERSONAL_TOKEN": "$JIRA_PERSONAL_TOKEN",
+        "CONFLUENCE_URL": "https://confluence.example.com",
+        "CONFLUENCE_PERSONAL_TOKEN": "$CONFLUENCE_PERSONAL_TOKEN"
+      }
+    },
+    {
+      "name": "mcp_1c",
+      "enabled": true,
+      "transport": "http",
+      "url": "https://your-1c-server/your-base/hs/mcp/rpc",
+      "username": "$MCP_ONEC_USERNAME",
+      "password": "$MCP_ONEC_PASSWORD",
+      "insecure_skip_verify": true,
+      "read_only": true
+    },
+    {
+      "name": "code_index",
+      "enabled": true,
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@regsorm/code-index-mcp@0.42.1", "serve", "--path", "/repo/MAIN_XML"],
+      "read_only": true,
+      "env": {
+        "CODE_INDEX_HOME": "/repo"
+      }
+    }
+  ],
+  "config": {
+    "model": "your-model-name",
+    "temperature": 0.3,
+    "vision_supported": true,
+    "confluence_spaces_filter": "YOUR_SPACE",
+    "confluence_pages": [
+      "https://confluence.example.com/pages/viewpage.action?pageId=123456789"
+    ]
+  }
+}

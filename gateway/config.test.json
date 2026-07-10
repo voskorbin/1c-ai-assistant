@@ -1,0 +1,24 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8000
+  },
+  "llm": {
+    "url": "http://localhost:8001/v1/chat/completions",
+    "model": "mock",
+    "api_key_env": "LLM_API_KEY",
+    "timeout_seconds": 60,
+    "max_tokens": 4096
+  },
+  "mcp_servers": [
+    {
+      "name": "mock_mcp",
+      "enabled": true,
+      "transport": "http",
+      "url": "http://localhost:8002/mcp"
+    }
+  ],
+  "config": {
+    "model": "mock"
+  }
+}

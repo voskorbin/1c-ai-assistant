@@ -1,0 +1,27 @@
+# Локальные конфиги с секретами
+start.local.bat
+config.local.json
+config.secrets.json
+.env
+
+# Логи
+*.log
+*.err
+*.out
+*.stdout
+*.stderr
+
+# Скомпилированные бинарники
+*.exe
+*.exe~
+*.dll
+
+# Бэкапы
+*.bak
+*.tmp
+
+# Временные файлы тестов
+mcp-proxy-test/
+reverse-proxy-test/
+test-proxy/
+test_mocks/

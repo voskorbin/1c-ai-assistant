@@ -1,0 +1,118 @@
+# -----------------------------------------------------------------------------
+# Вариант 2: несколько IB на одном хосте + Traefik для маршрутизации.
+# -----------------------------------------------------------------------------
+
+services:
+  # ---------------------------------------------------------------------------
+  # IB 1
+  # ---------------------------------------------------------------------------
+  ib1-gateway:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: ai-gateway-ib1
+    env_file:
+      - ./ib1.env
+    volumes:
+      - ./config.example.json:/app/config.json:ro
+      - ./ib1-repo:/repo:rw
+    networks:
+      - ai-gate
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ib1.rule=Host(`ib1.example.com`)"
+      - "traefik.http.routers.ib1.entrypoints=web"
+      - "traefik.http.services.ib1.loadbalancer.server.port=8000"
+
+  ib1-repo-sync:
+    image: alpine/git
+    container_name: ai-repo-sync-ib1
+    volumes:
+      - ./ib1-repo:/repo:rw
+    # Клонируем при первом старте, затем периодически обновляем
+    command: >
+      sh -c "
+        if [ ! -d /repo/.git ]; then
+          git clone ${IB1_GIT_URL} /repo;
+        fi;
+        while true; do
+          cd /repo && git pull;
+          sleep 60;
+        done
+      "
+    networks:
+      - ai-gate
+    restart: unless-stopped
+
+  # ---------------------------------------------------------------------------
+  # IB 2 (раскомментировать и скопировать для новых баз)
+  # ---------------------------------------------------------------------------
+  # ib2-gateway:
+  #   build:
+  #     context: ..
+  #     dockerfile: deploy/Dockerfile
+  #   container_name: ai-gateway-ib2
+  #   env_file:
+  #     - ./ib2.env
+  #   volumes:
+  #     - ./ib2.config.json:/app/config.json:ro
+  #     - ./ib2-repo:/repo:rw
+  #   networks:
+  #     - ai-gate
+  #   restart: unless-stopped
+  #   labels:
+  #     - "traefik.enable=true"
+      #     - "traefik.http.routers.ib2.rule=Host(`ib2.example.com`)"
+  #     - "traefik.http.routers.ib2.entrypoints=web"
+  #     - "traefik.http.services.ib2.loadbalancer.server.port=8000"
+  #
+  # ib2-repo-sync:
+  #   image: alpine/git
+  #   container_name: ai-repo-sync-ib2
+  #   volumes:
+  #     - ./ib2-repo:/repo:rw
+  #   command: >
+  #     sh -c "
+  #       if [ ! -d /repo/.git ]; then
+  #         git clone ${IB2_GIT_URL} /repo;
+  #       fi;
+  #       while true; do
+  #         cd /repo && git pull;
+  #         sleep 60;
+  #       done
+  #     "
+  #   networks:
+  #     - ai-gate
+  #   restart: unless-stopped
+
+  # ---------------------------------------------------------------------------
+  # Traefik — обратный прокси
+  # ---------------------------------------------------------------------------
+  traefik:
+    image: traefik:v2.10
+    container_name: ai-traefik
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--log.level=INFO"
+    ports:
+      - "80:80"
+      - "8080:8080"  # dashboard Traefik
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - ai-gate
+    restart: unless-stopped
+
+networks:
+  ai-gate:
+    driver: bridge
